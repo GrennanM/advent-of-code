@@ -1,5 +1,6 @@
 defmodule DepthMeasurement do
-  @input_path Path.expand("./1/input.txt")
+  @day 1
+  @input_path Path.expand("./2021/inputs/day_#{@day}.txt")
 
   def get_readings() do
     {:ok, contents} = File.read(@input_path)
@@ -25,7 +26,8 @@ defmodule DepthMeasurement do
 end
 
 defmodule DepthMeasurementTwo do
-  @input_path Path.expand("./1/input.txt")
+  @day 1
+  @input_path Path.expand("./2021/inputs/day_#{@day}.txt")
 
   def get_readings() do
     {:ok, contents} = File.read(@input_path)
