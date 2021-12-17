@@ -10,7 +10,7 @@ defmodule SyntaxScoring do
 
     contents
     |> String.split("\n", trim: true)
-    |> Enum.map(&String.split(&1, "", trim: true))
+    |> Enum.map(&String.graphemes/1)
   end
 
   def solve() do
