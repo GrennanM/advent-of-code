@@ -1,8 +1,6 @@
 input = fn day ->
   path = Path.expand("./inputs/day_#{day}.txt")
-  {:ok, contents} = File.read(path)
-
-  contents
+  File.read!(path)
 end
 
 ## Part One
