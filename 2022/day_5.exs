@@ -15,8 +15,7 @@ crates =
   |> Enum.map(&String.replace(&1, "    ", "[.]"))
   |> Enum.map(&String.replace(&1, [" ", "[", "]"], "", trim: true))
   |> Enum.map(&String.graphemes/1)
-  |> List.zip()
-  |> Enum.map(&Tuple.to_list/1)
+  |> Enum.zip_with(& &1)
   |> Enum.map(&Enum.filter(&1, fn x -> Regex.match?(~r/[A-Z]/, x) end))
 
 moves =
